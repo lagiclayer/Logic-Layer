@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:500,600,700,800"
+      rel="stylesheet"
+    />
+    <title>Mustaqil</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__body">  
+            <a
+              target="_blank"
+              href="#"
+              class="header__logo"
+            >
+              <img src="images/2025-05-04 20.58.25.jpg" alt="logo" />
+            </a>
+            <nav class="header__menu">
+              <ul class="header__list">
+                <li class="header__item stretch-line">
+                  <a href="#working" class="header__link">Ish Tajribasi</a>
+                </li>
+                <li class="header__item stretch-line">
+                  <a href="#skills" class="header__link">Talantlar</a>
+                </li>
+                <li class="header__item stretch-line">
+                  <a href="#code" class="header__link">Kod Na'munasi</a>
+                </li>
+                <li class="header__item stretch-line">
+                  <a href="#projects" class="header__link">Loyihalar</a>
+                </li>
+                <li class="header__item stretch-line">
+                  <a href="#education" class="header__link"
+                    >Ta'lim va Mashg'ulot</a
+                  >
+                </li>
+                <li class="header__item stretch-line">
+                  <style>
+                    .custom-select {
+                      position: relative;
+                      width: 200px;
+                      font-family: sans-serif;
+                      border-radius: 50px;
+                      
+                    }
+                  
+                    .selected {
+                      padding: 10px;
+                      background-color: #f0f0f0;
+                      cursor: pointer;
+                      display: flex;
+                      align-items: center;
+                      border: 1px solid #ccc;
+                      transition: background-color 0.3s ease;
+                      border-radius: 50px;
+                    }
+                  
+                    .selected:hover {
+                      background-color: #e0e0e0;
+                    }
+                  
+                    .selected img {
+                      width: 24px;
+                      height: 24px;
+                      margin-right: 10px;
+                      border-radius: 50%;
+                    }
+                  
+                    .options {
+                      position: absolute;
+                      top: 100%;
+                      left: 0;
+                      right: 0;
+                      border: 1px solid #ccc;
+                      background: white;
+                      overflow: hidden;
+                      max-height: 0;
+                      opacity: 0;
+                      transform: translateY(-10px);
+                      transition: all 0.3s ease;
+                      z-index: 10;
+                      border-radius: 0 0 8px 8px;
+                    }
+                  
+                    .options.show {
+                      max-height: 200px;
+                      opacity: 1;
+                      transform: translateY(0);
+                    }
+                  
+                    .option {
+                      padding: 10px;
+                      cursor: pointer;
+                      display: flex;
+                      align-items: center;
+                      transition: background-color 0.2s;
+                    }
+                  
+                    .option:hover {
+                      background-color: #eee;
+                    }
+                  
+                    .option img {
+                      width: 24px;
+                      height: 24px;
+                      margin-right: 10px;
+                      border-radius: 50%;
+                    }
+                  </style>
+                  
+                  <div class="custom-select" onclick="toggleOptions()">
+                    <div class="selected" id="selected">
+                      <img src="https://flagcdn.com/w40/uz.png" alt="Uzbek"> Uzbek
+                    </div>
+                  
+                    <div class="options" id="options">
+                      <div class="option" onclick="selectOption('https://flagcdn.com/w40/uz.png', 'Uzbek', 'uzb.html', event)">
+                        <img src="https://flagcdn.com/w40/uz.png" alt="Uzbek"> Uzbek
+                      </div>
+                      <div class="option" onclick="selectOption('https://flagcdn.com/w40/gb.png', 'English', 'index.html', event)">
+                        <img src="https://flagcdn.com/w40/gb.png" alt="English"> English
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <script>
+                    function toggleOptions() {
+                      const options = document.getElementById("options");
+                      options.classList.toggle("show");
+                    }
+                  
+                    function selectOption(flagSrc, text, link, event) {
+                      event.stopPropagation();
+                      document.getElementById("selected").innerHTML = `
+                        <img src="${flagSrc}" alt="${text}"> ${text}
+                      `;
+                      document.getElementById("options").classList.remove("show");
+                  
+                      // Tilga mos sahifaga o'tish
+                      window.location.href = link;
+                    }
+                  
+                    window.onclick = function(e) {
+                      if (!e.target.closest('.custom-select')) {
+                        document.getElementById("options").classList.remove("show");
+                      }
+                    }
+                  </script>
+                  
+                  </li>
+
+              </ul>
+            </nav>
+            <div class="burger__menu"><span></span></div>
+          </div>
+        </div>
+      </header>
+      <main class="page">
+        <section class="page__personal-info">
+          <div class="personal-info__container">
+            <div class="personal-info__body">
+              <div class="personal-info__content">
+                <h1 class="personal-info__content-title">
+                  <div class="name"><span style="font-size: 150px;">L</span><h3 class="ogic">ogic</h3><h3 class="ayer">ayer</h3></div>
+                </h1>
+                <div class="personal-info__about">
+                  <p>
+                    Salom! Men to‘liq siklli (full-stack) veb-dasturchiman. 
+                    <p class="about">
+                      Backend uchun Django, frontend uchun zamonaviy 
+                    </p>
+                  </p>
+                  <p class="about">
+                   HTML, CSS va JavaScript texnologiyalariga ixtisoslashganman. 
+                  </p>
+                  <p class="about">
+                    Tez, xavfsiz va qurilmalarga mos veb-saytlar hamda veb-ilovalarni yarataman.
+                  </p>
+                  
+                </div>
+                <h2 class="personal-info__content-subtitle subtitle">
+                  Shaxsiy Ma'lumot
+                </h2>
+                <div class="personal-info__content-text text">
+                  <p><span>Ism:</span>Firdavs Raxmonov</p>
+                  <p>
+                    <span>Telefon raqam:</span
+                    ><a
+                      class="stretch-line"
+                      target="_blank"
+                      href="tel:+998 88 865 99 44"
+                      >+998 94-938-69-38</a
+                    >
+                  </p>
+                  
+                  <p>
+                    <span>E-mail:</span
+                    ><a
+                      class="stretch-line"
+                      target="_blank"
+                      href="mailto:dalerii339@gmail.com"
+                      >firdavs07vip@gmail.com</a
+                    >
+                  </p>
+                  <p>
+                    <span>LinkedIn:</span
+                    ><a
+                      class="stretch-line"
+                      href="https://www.linkedin.com/?ysclid=lzjyfon2s570322501"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >LinkedIn</a
+                    >
+                  </p>
+                  <br><br>
+                  <div class="work-5">
+                  <a href="https://t.me/Raxmonov_013"><i class="fa-brands fa-telegram"></i></a> 
+                  <a href="https://www.instagram.com/raxmonov.013">  <i class="fa-brands fa-instagram"></i></a>
+                   <a href="https://call.whatsapp.com/video/zRAeFxYOUHCsLJoyFT3F0f"><i class="fa-brands fa-whatsapp"></i></a></div>
+                </div>
+              </div>
+              <div class="personal-info__image">
+                <img src="images/photo_2025-01-20_09-18-01.jpg" alt="Anatoli Paliukhovich" />
+                <div
+                class="personal-info__image-decor personal-info__image-decor-1"
+              ></div>
+              <div
+                class="personal-info__image-decor personal-info__image-decor-2"
+              ></div>
+              <div
+                class="personal-info__image-decor personal-info__image-decor-3"
+              ></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="working" class="page__work-experience">
+          <div class="work-experience__container">
+            <h2 class="work-experience__subtitle subtitle">
+              Ish Tajribasi
+            </h2>
+            <div class="work-experience__body">
+              <div class="work-experience__column work-experience__column-1">
+                <div class="work-experience__item">
+                  <div class="work-experience__text text">
+                    <p>
+                      <span>Tashkilot nomi:</span>Logic Layer
+                    </p>
+                    <p><span>Ish muddati:</span>2 yil</p>
+                    <p>
+                      <span>Lovozim:</span>Back-end va Front-end dasturchisi
+                    </p>
+                    <p><span>O‘qituvchining asosiy vazifalari:</span></p>
+                    <ul class="text__list">
+                      <li class="text__item">Darslarni tashkillashtirish va rejalashtirish.</li>
+                      <li class="text__item">
+                        Dars uchun kerakli materiallarni oldindan tayyorlab qo‘yish.
+                      </li>
+                      <li class="text__item">
+                        Fanni chuqur o‘rganing va sinfda muhokama qilish uchun dolzarb masalalardan xabardor bo‘lib boring.
+                      </li>
+                      <li class="text__item">
+                        Ota-ona va o‘qituvchi uchrashuvlarida qatnashing va o‘quvchilarning oilalari bilan ochiq va halol muloqot qiling.
+
+
+                      </li>
+                      <li class="text__item">Hisobotlarni muntazam ravishda yozib boring.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <img src="images/2025-05-04 20.58.25.jpg" alt="" class="l-heiht">
+        </section>
+        <section id="skills" class="page__skills">
+          <div class="skills__container">
+            <div class="skills__subtitles">
+              <h2 class="skills__subtitle subtitle">Talantlar</h2>
+            </div>
+            <div class="skills__body">
+              <div class="skills__column">
+                <div class="skills__items">
+                  <ul class="skills__list items-hard-skills">
+                    <li class="skills__item skills__item-1">
+                      <img src="images/html5.png" alt="html" />
+                    </li>
+                    <li class="skills__item">
+                      <img src="images/css.png" alt="css" />
+                    </li>
+                    <li class="skills__item skills__item-1">
+                      <img src="images/javascript-logo-javascript-icon-transparent-free-png.png" alt="js" />
+                    </li>
+                    <li class="skills__item skills__item-1">
+                      <img src="images/2945099.webp" alt="js" />
+                    </li>
+              
+                    <li class="skills__item skills__item-1">
+                      <img width="47" height="47" src="images/Octicons-mark-github.svg.png" alt="git" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="skills__column">
+                <div class="skills__items">
+                  <ul class="skills__list">
+                    <li class="skills__item">yaxshi baholash</li>
+                    <li class="skills__item skills__item-1">
+                      qo'llab-quvvatlovchi jamoa
+                    </li>
+                    <li class="skills__item">uzoq vaqt davomida ishlash</li>
+                    <li class="skills__item skills__item-1">
+                      har bir detalga e'tibor berish
+                    </li>
+                    <li class="skills__item">
+                      O‘rganishga va professional sifatida rivojlanishga tayyorlik.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="code" class="page__code-example">
+          <div class="code-example__container">
+            <div class="code-example__body">
+              <div class="code-example__subtitles">
+                <h2 class="code-example__subtitle subtitle">Kod Na'munasi</h2>
+                <h3 class="code-example__subtitle">
+                  Tanlangan na'muna
+                </h3>
+              </div>
+              <div class="code-example__column">
+                <pre>
+							<div class="code-example__item">
+                <h3>
+                  <pre><code class="language-cpp" style="font-size: 15px;display: flex;  justify-content: center;" >
+                   #include &lt;iostream&gt;
+                  using namespace std;
+                    
+                  int main() {
+                      int sum = 0;
+                      for (int i = 1; i &lt;= 5; i++)
+                    {
+                      sum += i;
+                      cout &lt;&lt; "Sum: " &lt;&lt; sum;
+                    }
+                       return 0;
+                  }
+                    </code></pre>
+                    
+                </h3>
+                </div>
+						 </pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="projects" class="page__projects">
+          <div class="projects__container">
+            <h2 class="projects__subtitle subtitle">Loyihalar</h2>
+            <div class="projects__body">
+              <div class="projects__image">
+                <img src="images/2024-10-29 11.50.17.jpg" alt="project" />
+                <div
+                  class="projects__image-image-decor projects__image-image-decor-1"
+                ></div>
+                <div
+                  class="projects__image-image-decor projects__image-image-decor-2"
+                ></div>
+                <div
+                  class="projects__image-image-decor projects__image-image-decor-3"
+                ></div>
+              </div>
+              <div class="projects__content">
+                <div class="projects__subts">
+                  <a
+                    target="_blank"
+                    href="http://127.0.0.1:5501/css/index.html#skills"
+                    class="projects__subtitle stretch-line"
+                    >Curriculum Vitae</a
+                  >
+                  <a
+                    target="_blank"
+                    href="https://otabekkadirov.github.io/puma/"
+                    class="projects__subtitle stretch-li"
+                    >Puma</a
+                  >
+                  <a
+                    target="_blank"
+                    href="https://github.com/DalerRX"
+                    class="projects__subtitle stretch-line"
+                    >GitHub</a
+                  >
+                <a
+                  target="_blank"
+                  href="https://www.figma.com/design/I39IN0wye4x0PpA7eWy9Ij/Amaliyot-uchun-(Copy)-(Copy)?node-id=0-1&t=s4aJVxL4wp7vUBsB-0"
+                  class="projects__button"
+                  >Ko'rish uchun bosing</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="education" class="page__education">
+          <div class="education__container">
+            <h2 class="education__subtitle subtitle">Ta'lim va Mashg'ulot</h2>
+            <div class="education__body">
+              <div class="education__column">
+                <div class="work-experience__text text">
+                  <p>
+                    <span>Kurs nomi:</span>Pro-unity
+                  <p>
+                    <span>O'rganish muddati:</span>2024
+                  </p>
+                  <p><span>Daraja:</span>O'quvchi</p>
+                  <p><span>Asosiy tillar:</span>Ingliz tili </p>
+                </div>
+              </div>
+              <div class="education__column">
+                <div class="work-experience__text text">s
+                  <p><span>Kurs nomi:</span>Logic-layer</p>
+                  <p><span>O'rganish muddati</span>6 oy</p>
+                  <p><span>Daraja:</span>backend va frontend dasturchisi</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </section>
+        <section id="projects" class="page__projects">
+          <div class="projects__container">
+            <div class="projects__body">
+              <section class="page__languages">
+                <div class="languages__container">
+                  <h2 class="languages__subtitle subtitle">Tillar</h2>
+                  <div class="languages__body">
+                    <div class="languages__content">
+                      <p>O'zbek tili - ona tili</p>
+                      <p>English - Upper-intermediate</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <div class="projects__body">
+                <div class="projects__image">
+                  <img src="images/scale_1200.jpg" alt="project" />
+                  <div
+                    class="projects__image-image-decor projects__image-image-decor-1"
+                  ></div>
+                  <div
+                    class="projects__image-image-decor projects__image-image-decor-2"
+                  ></div>
+                  <div
+                    class="projects__image-image-decor projects__image-image-decor-3"
+                  ></div>
+                </div>
+              
+          </div>
+        </section>
+
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <a
+            target="blank"
+            href="https://github.com/DalerRX"
+            class="footer__link-githab"
+            >GitHub</a
+          >
+          <div class="admin">Raxmonov Firdavs</div>
+          <div class="footer__text">2024</div>
+          </a>
+        </div>
+      </footer>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
